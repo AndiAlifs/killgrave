@@ -1,0 +1,45 @@
+[
+    {
+      "request": {
+        "method": "POST",
+        "endpoint": "/qr/debit/payment"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "delay": "1s:2s",
+        "body": "{\"mti\":\"0210\",\"responseCode\":\"00\",\"approvalCode\":\"121212\",\"processingCode\":\"001000\"}"
+      }
+    }, 
+    {
+      "request": {
+        "method": "POST",
+        "endpoint": "/qr/debit/paymentReversal"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "delay": "2s:3s",
+        "body": "{\"mti\":\"0430\",\"responseCode\":\"00\",\"originalDataElement\":[{\"oriMTI\":\"0200\",\"oriSystemTraceAuditNumber\":\"678909\",\"oriTransmissionDateTime\":\"20180313160000\",\"oriAcquireID\":\"008\",\"oriForwardingId\":\"008\"}]}"
+      }
+    }, 
+    {
+      "request": {
+        "method": "POST",
+        "endpoint": "/qr/debit/paymentReversalRepeat"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          
+          "Content-Type": "application/json"
+        },
+        "delay": "5s:6s",
+        "body": "{\"mti\":\"0430\",\"responseCode\":\"00\",\"originalDataElement\":[{\"oriMTI\":\"0200\",\"oriSystemTraceAuditNumber\":\"678909\",\"oriTransmissionDateTime\":\"20180313160000\",\"oriAcquireID\":\"008\",\"oriForwardingId\":\"008\"}]}"
+      }
+    }
+  ]
